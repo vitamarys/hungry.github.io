@@ -1,0 +1,184 @@
+.event {
+  width: 100%;
+  padding: 50px 0;
+  background-image: url(../assets/specialtys-bgEvent.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  .conteiner {
+    display: flex;
+    flex-wrap: nowrap;
+
+    justify-content: center;
+    @include adapt(550px) {
+      flex-direction: column;
+    }
+    @media (min-width: 501px) and (max-width: 1024px) {
+      flex-direction: column;
+    }
+  }
+  .title {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+    margin-bottom: 50px;
+  }
+  .description {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 50px;
+    @include adapt(500px) {
+      padding: 0 10px;
+    }
+    @media (min-width: 501px) and (max-width: 1024px) {
+      padding: 0 10px;
+    }
+  }
+  .block {
+    width: 50%;
+
+    padding: 0 40px 0 0;
+    @include adapt(550px) {
+      width: 100%;
+      padding: 0 !important;
+      display: flex;
+      justify-content: center;
+    }
+    @media (min-width: 501px) and (max-width: 1024px) {
+      width: 100%;
+      padding: 0 !important;
+      display: flex;
+      justify-content: center;
+    }
+
+    &:nth-last-child(1) {
+      padding: 0 0 0 40px;
+      @include adapt(550px) {
+        padding: 0 !important;
+      }
+      @media (min-width: 501px) and (max-width: 1024px) {
+        padding: 0 !important;
+      }
+    }
+    &__item {
+      width: 475px;
+      height: 475px;
+
+      display: flex;
+      float: right;
+      @include adapt(500px) {
+        width: 300px;
+        height: 388px;
+        float: none;
+        margin-bottom: 30px;
+      }
+      @media (min-width: 501px) and (max-width: 1024px) {
+        width: 400px;
+        height: 450px;
+        float: none;
+        margin-bottom: 30px;
+        position: relative;
+      }
+      :hover {
+        transition: ease-in 0.5s;
+        z-index: 2;
+        filter: blur(0px);
+      }
+
+      :hover .block__item__img__pad {
+        opacity: 0.5;
+        transition: ease-in 0.3s;
+        transform: rotate(-45deg);
+        z-index: -1;
+      }
+
+      &__img {
+        position: relative;
+        width: 83%;
+        height: 100%;
+
+        &__pad {
+          position: absolute;
+          left: -240px;
+          z-index: 2;
+          transition: ease-in 0.5s;
+          pointer-events: none;
+          @include adapt(550px) {
+            width: 275px !important;
+            height: 275px !important;
+            left: -95px;
+            top: 52px;
+          }
+          @media (min-width: 501px) and (max-width: 1024px) {
+            width: 450px !important;
+            height: 450px !important;
+
+            left: -212px;
+            top: -24px;
+
+            position: absolute;
+          }
+        }
+
+        & > img {
+          filter: blur(2px);
+          transition: ease-in 0.5s;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: left center;
+        }
+      }
+      &__description {
+        width: 17%;
+        height: 100%;
+        background-color: black;
+        position: relative;
+        &__text {
+          display: block;
+          font-family: "BannyBoldRound";
+          text-transform: uppercase;
+          white-space: nowrap;
+          color: #ffffff;
+          font-size: 24px;
+          line-height: 12px;
+          transform: rotate(90deg);
+          text-indent: 50px;
+        }
+      }
+    }
+  }
+  .bot {
+    position: relative;
+    bottom: -98%;
+    transform: rotate(-90deg);
+  }
+  .right {
+    flex-direction: row-reverse;
+    float: left;
+  }
+  .second {
+    position: absolute;
+    left: 158px;
+    @include adapt(550px) {
+      left: 55px;
+    }
+    @media (min-width: 501px) and (max-width: 1024px) {
+      left: 55px;
+    }
+  }
+}

@@ -1,0 +1,223 @@
+.contact {
+  width: 100%;
+  padding: 100px 0 50px 0;
+}
+.contact__text {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  @include adapt(500px) {
+    width: auto;
+  }
+  @media (min-width: 501px) and (max-width: 1024px) {
+    width: auto;
+  }
+  &__title {
+    font-family: "BannyBoldRound";
+    font-size: 36px;
+    line-height: 48px;
+
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__underline {
+    width: 61.06px;
+    height: 5px;
+
+    background: #e8c300;
+    border-radius: 50px;
+    margin: 10px 0;
+  }
+  &__description {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+
+    text-align: center;
+
+    color: #000000;
+    @include adapt(500px) {
+      font-size: 15;
+    }
+  }
+}
+.contact-form {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__input {
+    padding: 0 20px;
+    width: calc(33.3333% - 10px);
+    height: 60px;
+    background: #e5e5e5;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    margin-right: 10px;
+
+    color: rgba(51, 51, 51, 0.5);
+    @include adapt(500px) {
+      width: 100% !important;
+      margin: 10px 0px;
+    }
+    @media (min-width: 501px) and (max-width: 1024px) {
+      width: 100% !important;
+      margin: 10px 0px;
+    }
+    &:nth-child(3) {
+      margin: 0;
+      width: 33.3333%;
+      @include adapt(500px) {
+        width: 100%;
+        margin: 10px 0px;
+      }
+      @media (min-width: 501px) and (max-width: 1024px) {
+        width: 100% !important;
+        margin: 10px 0px;
+      }
+    }
+  }
+  .textarea {
+    width: 100%;
+    resize: none;
+    height: 120px;
+    padding: 20px;
+    margin: 10px 0;
+    overflow-x: hidden;
+  }
+  &__submit {
+    display: flex;
+    width: 100%;
+    @include adapt(500px) {
+      flex-direction: column-reverse;
+    }
+    @media (min-width: 501px) and (max-width: 1024px) {
+      flex-direction: column-reverse;
+    }
+    &__destription {
+      display: flex;
+      width: 50%;
+      @include adapt(500px) {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+      }
+      @media (min-width: 501px) and (max-width: 1024px) {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      &__item {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        @include adapt(500px) {
+          width: 100%;
+
+          margin: 10px 0;
+        }
+        @media (min-width: 501px) and (max-width: 1024px) {
+          width: 100%;
+
+          margin: 10px 0;
+        }
+
+        &__text {
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 12px;
+          color: #999999;
+          text-align: center;
+        }
+        &__img {
+          width: 20px;
+          height: 20px;
+          margin-right: 5px;
+        }
+      }
+    }
+    &__btn {
+      width: 50%;
+      height: 60px;
+      border: none;
+      outline: none;
+      background: #e8c300;
+      border-radius: 5px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      color: #ffffff;
+      transition: ease-out 0.5s;
+      @include adapt(500px) {
+        width: 100%;
+      }
+      @media (min-width: 501px) and (max-width: 1024px) {
+        width: 100%;
+      }
+
+      &:hover {
+        transition: ease-out 0.5s;
+        border: 1px solid #e8c300;
+        color: #e8c300;
+        background: #ffff;
+      }
+    }
+  }
+}
+.map {
+  width: 100%;
+  height: 500px;
+  margin-top: 100px;
+  @include adapt(500px) {
+    margin-top: 50px;
+  }
+  @media (min-width: 501px) and (max-width: 1024px) {
+    margin-top: 50px;
+  }
+}
+input::-webkit-input-placeholder {
+  text-indent: 0px;
+  transition: text-indent 0.3s ease;
+}
+input:focus::-webkit-input-placeholder {
+  text-indent: 500px;
+  transition: text-indent 0.3s ease;
+}
+textarea::-webkit-input-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.footer {
+  width: 100%;
+  padding: 30px 0;
+  background: rgba(0, 0, 0, 0.9);
+  &__text {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.5);
+  }
+}

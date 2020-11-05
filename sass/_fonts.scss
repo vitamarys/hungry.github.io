@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
+@font-face {
+  font-family: "BannyRound";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Banny Round"), url("../sass/Banny-Round.woff") format("woff");
+}
+
+@font-face {
+  font-family: "BannyLightRound";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Banny Light Round"),
+    url("../sass/Banny-LightRound.woff") format("woff");
+}
+
+@font-face {
+  font-family: "BannyBoldRound";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Banny Bold Round"),
+    url("../sass/Banny-BoldRound.woff") format("woff");
+}

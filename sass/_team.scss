@@ -1,0 +1,164 @@
+.team {
+  width: 100%;
+  background-image: url(../assets/specialtys-bg.png);
+  background-size: cover;
+  background-position: center bottom;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    margin: 0 auto;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
+}
+
+.team__content {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: nowrap;
+  @include adapt(500px) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  @media (min-width: 501px) and (max-width: 1024px) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  &__block {
+    width: 50%;
+    @include adapt(500px) {
+      width: 100%;
+      padding: 0 !important;
+      position: relative;
+    }
+    @media (min-width: 501px) and (max-width: 1024px) {
+      width: 100%;
+      padding: 0 !important;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    &:nth-child(1) {
+      padding-right: 40px;
+      display: flex;
+    }
+    &:nth-child(2) {
+      padding-left: 40px;
+    }
+    &__title {
+      margin-top: 110px;
+      font-family: "BannyBoldRound";
+      font-size: 36px;
+      line-height: 48px;
+      /* or 133% */
+
+      text-align: center;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.9);
+      @include adapt(500px) {
+        margin-top: 60px;
+      }
+      @media (min-width: 501px) and (max-width: 1024px) {
+        margin-top: 60px;
+      }
+    }
+    &__underline {
+      width: 59.19px;
+      height: 5px;
+      margin: 0 auto;
+      background: #e8c300;
+      border-radius: 50px;
+      margin-bottom: 10px;
+    }
+    &__description {
+      &__bold {
+        display: block;
+        margin-bottom: 30px;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 28px;
+
+        text-align: center;
+
+        color: rgba(255, 255, 255, 0.9);
+        @include adapt(500px) {
+          font-size: 15px;
+        }
+      }
+      &__light {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 28px;
+
+        text-align: center;
+
+        color: rgba(255, 255, 255, 0.9);
+        @include adapt(500px) {
+          font-size: 13px;
+        }
+      }
+    }
+    &__img {
+      object-fit: cover;
+      object-position: center;
+      transition: ease-in 0.5s;
+      @include adapt(500px) {
+        width: 100%;
+      }
+      @media (min-width: 501px) and (max-width: 1024px) {
+        width: 100%;
+      }
+
+      cursor: pointer;
+      &:hover {
+        transition: ease-in 0.5s;
+        z-index: 1;
+        transform: scale(1.1);
+      }
+      &:hover + .team__content__block__pad {
+        opacity: 0.5;
+        transition: ease-in 0.5s;
+        transform: rotate(-45deg);
+      }
+    }
+    &__pad {
+      position: relative;
+      left: -733px;
+      @include adapt(500px) {
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        left: -67px;
+        top: 39px;
+      }
+      @media (min-width: 501px) and (max-width: 1024px) {
+        position: absolute;
+        width: 450px;
+
+        height: 450px;
+        left: -97px;
+        top: 98px;
+      }
+    }
+  }
+}

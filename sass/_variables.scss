@@ -1,0 +1,21 @@
+@mixin headerNav {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+
+  text-align: center;
+
+  color: #ffffff;
+}
+@mixin adapt($num) {
+  @media screen and (max-width: $num) {
+    @content;
+  }
+}
+@mixin adaptMin($num) {
+  @media (min-width: 481px) and (max-width: 1024px) {
+    @content;
+  }
+}
